@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+</head>
+<body>
+    <div class="header">
+    	<span class="logo">GEEWAN 极玩</span>
+    	<a href="#" class="toEn"></a>
+    	<a href="#" class="logout"></a>
+    </div>
+    <div class="content">
+    	<div class="notice">
+    		<div id="state">
+                <i class="wan_ok" id="status_icon"></i>
+                <span class="span1" id="loading" style="display: none;">读取中...</span>
+                <span class="span1" id="wan_unlinked" style="display:none;"><span id="status">WAN口网线没有插好，</span>点此快速开始<a id="wan_link1" href="http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/net/internet">外网设置</a></span>
+                <span class="span1" id="wan_ok" style="">网络已连接，去设置<a href="http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/net/accel">网络加速</a>。</span>
+                <span class="span1" id="wan_fail" style="display:none;"><span id="status">网络未连接，</span>去进行<a id="wan_link" href="http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/net/internet">外网设置</a>和<a href="http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/net/accel">网络加速设置</a>。</span>
+            </div>
+            <!--ttt2016/5/25修改部分：添加消息通知-->
+            <div id="mes_list" class="mes_list" style="display:none;">
+                <p>0.极玩发布新固件啦~快来升级吧！</p>
+                <p>1.极玩发布新固件啦~快来升级吧！</p>
+                <p>2.极玩发布新固件啦~快来升级吧！</p>
+                <p>3.极玩发布新固件啦~快来升级吧！</p>
+            </div>
+    	</div>
+
+    	<div class="sysinfo">
+    		<span class="item_bg">系统信息</span>
+    		<div class="item_wrap">
+                  <p><span class="span01">硬件型号</span><span>GF1</span></p>
+                  <p><span class="span01">软件版本</span><span>bigwan 0.0.23-FREGIE</span></p>
+                  <p><span class="span01">MAC地址</span><span>88:70:22:00:0F:DC</span></p>
+                  <p><span class="span01">运行时间</span><span id="uptime" style="min-width:10em;">1天17小时51分</span></p>
+              </div>
+    	</div>
+
+    	<div class="outerinfo">
+    		<span class="item_bg">外网状态</span>
+    		<a href="#" class="goset">设置>></a>
+    		<div class="item_wrap">
+                <p><span class="span01">状态</span><span id="wan_status">已连接 1天17小时49分</span></p>
+                <div id="wan_box">
+	                <p><span class="span01">IP地址</span><span id="wan_ip">192.168.1.108</span></p>
+	                <p><span class="span01">网关</span><span id="wan_gw">192.168.1.1</span></p>
+	                <p><span class="span01">首选DNS</span><span id="dns1">192.168.1.1</span></p>
+	                <p><span class="span01">备用DNS</span><span id="dns2">N/A</span></p>
+                </div>
+              </div>
+    	</div>
+
+    	<div class="accelinfo">
+    		<span class="item_bg">网络加速</span>
+    		<a href="#" class="goset">设置>></a>
+    		<div class="item_wrap">
+                <p><span class="span01">加速状态</span>
+                	<span style="display:inline-block;"><i class="accel_ok"></i> 正常</span></p>
+                	<!-- <span id="accel_nok"><i class="accel_nok"></i>未连接</span></span> -->
+                <p><span class="span01">加速服务器</span><span>香港A005线</span></p>
+                <p><span class="span01">状态服务器</span><span>香港A005线</span></p>
+          </div>
+    	</div>
+
+    	<div class="wifiinfo">
+    		<span class="item_bg">无线状态</span>
+    		<a href="#" class="goset">设置>></a>
+    		<div class="item_wrap">
+                <p><span class="span01">状态</span><span id="wifi_status">运行中</span></p>
+                <p><span class="span01">名称</span><span id="ssid">Geewan_000FDC</span></p>
+                <p><span class="span01">加密</span><span id="enc">强加密</span></p>
+                <p><span class="span01">信道</span><span id="channel">11</span></p>
+              </div>
+    	</div>
+    </div>
+
+    <div class="footer_menu">
+    	<ul class="menu">
+    		<li class="mselecetd"><img src="images/home_icon.png" /><br /><span>主页</span></li>
+    		<li><img src="images/out_icon.png" /><br /><span>外网设置</span></li>
+    		<li><img src="images/accel_icon.png" /><br /><span>加速设置</span></li>
+    		<li><img src="images/wifi_icon.png" /><br /><span>无线设置</span></li>
+    		<li><img src="images/set_icon.png" /><br /><span>高级设置</span></li>
+    	</ul>
+    </div>
+</body>
+</html>
