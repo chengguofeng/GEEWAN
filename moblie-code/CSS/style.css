@@ -27,8 +27,8 @@ a{ color: #30a5ff; text-decoration: none; }
 
 .footer_menu{ font-size: 0; }
 ul.menu{ width: 100%; position: fixed; bottom: 0; background-color: #fff; }
-ul.menu li{ display: inline-block; padding: 5px 0; text-align: center; color: #0083cc; font-size: 12px; width: 20%; }
+ul.menu li{ display: inline-block; border-top: 2px solid #ccc; padding: 5px 0; text-align: center; color: #0083cc; font-size: 12px; width: 20%; }
 ul.menu li img{ width: 50%; margin-top: 10px; }
 ul.menu li span{  width: 4em; }
 ul.menu li span.glyphicon{ font-size: 30px; margin: 0 auto; width: 100%; }
-ul.menu .mselecetd{ background-color: #f1f4f7; }
+ul.menu .mselecetd{ background-color: #f1f4f7; border-top: 2px solid #f1f4f7; border-bottom: 2px solid #0083cc; }
