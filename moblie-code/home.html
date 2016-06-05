@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0088)http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/sys/sysinfo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="CSS/fontstyle.css">
+    <link rel="stylesheet" type="text/css" href="CSS/mobile-style.css">
     <link rel="stylesheet" type="text/css" href="CSS/fontstyle.css">
 </head>
 <body>
     <div class="header">
     	<span class="logo">GEEWAN 极玩</span>
-    	<a href="#" class="toEn"></a>
-    	<a href="#" class="logout"></a>
+    	<!-- <a href="#" class="toEn"></a> -->
+    	<span class="glyphicon glyphicon-log-out logout"></span>
     </div>
+    
     <div class="content">
     	<div class="notice">
     		<div id="state">
@@ -42,6 +43,19 @@
               </div>
     	</div>
 
+        <div class="accelinfo">
+            <span class="item_bg">网络加速</span>
+            <a href="#" class="goset">设置>></a>
+            <div class="item_wrap">
+                <p><span class="span01">加速状态</span>
+                <span class="glyphicon glyphicon-ok-sign ok_icon"></span>
+                    <span> 正常</span></p>
+                    <!-- <span id="accel_nok"><i class="accel_nok"></i>未连接</span></span> -->
+                <p><span class="span01">加速服务器</span><span>香港A005线</span></p>
+                <p><span class="span01">账号期限</span><span>剩余233天</span></p>
+          </div>
+        </div>
+
     	<div class="outerinfo">
     		<span class="item_bg">外网状态</span>
     		<a href="#" class="goset">设置>></a>
@@ -54,18 +68,6 @@
 	                <p><span class="span01">备用DNS</span><span id="dns2">N/A</span></p>
                 </div>
               </div>
-    	</div>
-
-    	<div class="accelinfo">
-    		<span class="item_bg">网络加速</span>
-    		<a href="#" class="goset">设置>></a>
-    		<div class="item_wrap">
-                <p><span class="span01">加速状态</span>
-                	<span style="display:inline-block;"><i class="accel_ok"></i> 正常</span></p>
-                	<!-- <span id="accel_nok"><i class="accel_nok"></i>未连接</span></span> -->
-                <p><span class="span01">加速服务器</span><span>香港A005线</span></p>
-                <p><span class="span01">账号期限</span><span>剩余233天</span></p>
-          </div>
     	</div>
 
     	<div class="wifiinfo">
@@ -82,12 +84,22 @@
 
     <div class="footer_menu">
     	<ul class="menu">
-    		<li class="mselecetd"><span class="glyphicon glyphicon-home"></span><span>主页</span></li>
-    		<li><span class="glyphicon glyphicon-globe"></span><span>外网设置</span></li>
-    		<li><span class="glyphicon glyphicon-send"></span><br /><span>加速设置</span></li>
-    		<li><span class="glyphicon glyphicon-signal"></span><span>无线设置</span></li>
-    		<li><span class="glyphicon glyphicon-cog"></span><br /><span>高级设置</span></li>
+    		<li class="mselecetd"><span class="glyphicon glyphicon-home"></span>
+                <a href="#">主页</a></li>
+            <li><span class="glyphicon glyphicon-send"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/accel.html">加速设置</a></li>
+    		<li><span class="glyphicon glyphicon-globe"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/outnet.html">外网设置</a></li>
+    		<li><span class="glyphicon glyphicon-signal"></span>
+                <a href="#">无线设置</a></li>
+    		<li><span class="glyphicon glyphicon-cog"></span>
+                <a href="#">高级设置</a></li>
     	</ul>
+    </div>
+
+    <div class="footer">
+        <span>移动端</span><span>|</span><span>电脑端</span>
+        <p class="cpright">Copyright 2014-2016 极玩路由器</p>
     </div>
 </body>
 </html>
