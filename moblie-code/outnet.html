@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0088)http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/sys/sysinfo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/mobile-style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fontstyle.css">
+</head>
+<body>
+    <div class="header">
+        <span class="logo">GEEWAN 极玩</span>
+        <!-- <a href="#" class="toEn"></a> -->
+        <span class="glyphicon glyphicon-log-out logout"></span>
+    </div>
+
+    <div class="content">
+    	<div class="outnet">
+    		<form class="form" autocomplete="off" name="wan" id="wan">
+                <div class="item">
+                    <label class="out_item">上网方式</label>
+                    <div class="select">
+                        <p><a href="" value="wisp">无线中继</a></p>
+                        <ul style="display:none">
+                            <li><a href="" value="dhcp">自动获取</a></li>
+                            <li><a href="" value="pppoe">宽带拨号</a></li>
+                            <li><a href="" value="static">静态IP</a></li>
+                        </ul>
+                    </div>                            
+                </div>
+                <div id="pppoe" name="pppoe" style="display:none">
+                    <div class="item">
+                        <label class="k">用户名</label>
+                        <span class="v"><input class="text_ipt" type="text" autocomplete="off" name="username"></span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                    <div class="item">
+                        <label class="k">密码</label>
+                        <span class="v">
+                            <input type="password" id="password" name="password" value="" class="text_ipt" autocomplete="off">
+                            <input type="text" class="text_ipt hide" id="passwordshow" name="passwordshow" autocomplete="off">
+                        </span>
+                        <span class="xymm" id="show_pppoe_pwd">显示密码</span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                </div>
+
+                <div id="static" name="static" style="display:none">
+                    <div class="item">
+                        <label class="k">IP</label>
+                        <span class="v"><input class="text_ipt" type="text" autocomplete="off" name="ip"></span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                    <div class="item">
+                        <label class="k">掩码</label>
+                        <span class="v"><input class="text_ipt" type="text" autocomplete="off" name="mask"></span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                    <div class="item">
+                        <label class="k">网关</label>
+                        <span class="v"><input class="text_ipt" type="text" autocomplete="off" name="gw"></span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>  
+                </div>
+
+                <div id="wisp" name="wisp" style="">
+                    <div class="item">
+                        <label class="out_item">名称</label>
+                        <!-- <span id="ssid_wrapper" style="display: none;"></span> -->
+                        <div class="select">
+                            <ul>
+                                <li><a href="" value="wisp">fregie-wifi(信道9)</a></li>
+                                <li><a href="" value="dhcp">自动获取</a></li>
+                                <li><a href="" value="pppoe">宽带拨号</a></li>
+                                <li><a href="" value="static">静态IP</a></li>
+                            </ul>
+                        </div>
+                        <!-- <a href="">xxxxxxxxxxxxxx</a> -->
+                        <input type="button" name="rescan" id="scan" class="button rescan" value="重新扫描" />
+                        
+                        <!-- <span class="xymm" id="scanning" style="">
+                            <img src="./internet_files/loading.gif" align="absmiddle">
+                            <span>正在扫描周围无线信号</span>
+                        </span> -->
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                    <div class="item" id="wisp_key_box" style="display:none;">
+                        <label class="k">密码</label>
+                        <span class="v">
+                            <input type="password" id="wisp_key" name="wisp_key" value="" class="text_ipt show" autocomplete="off">
+                            <input type="text" class="text_ipt hide" id="wisp_key_plain" name="wisp_key_show" autocomplete="off">
+                        </span>
+                        <span class="xymm" id="show_wisp_key">显示密码</span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                        <input type="hidden" name="bssid">
+                        <input type="hidden" name="channel">
+                        <input type="hidden" name="encryption">
+                    </div>
+                    <div class="item">
+                        <label class="out_item">状态</label>
+                        <span class="ztips" id="wisp_status">已连接</span>
+                    </div>
+                </div>
+
+                <div class="item" id="dns_check" style="display: none;">
+                    <span class="k"><input type="checkbox" class="ckbox" id="ckf"></span>
+
+                    <label class="v autosz" for="ckf">手动设置DNS</label>
+                </div>
+                <div class="dns-box" style="display:none; position:relative;">
+                    <div class="item">
+                        <label class="k">首选DNS</label>
+                        <span class="v">
+                            <input class="text_ipt" type="text" autocomplete="off" name="dns1" id="dns_1">
+                        </span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                    <div class="item">
+                        <label class="k">备用DNS</label>
+                        <span class="v">
+                            <input class="text_ipt" type="text" autocomplete="off" name="dns2" id="dns_2">
+                        </span>
+                        <span class="v autosz kx">(可选)</span>
+                        <br>
+                        <p class="t tips-2" style="display:none;"></p>
+                    </div>
+                    <table id="servers" class="table dyn_table tablesorter" style="width:380px; position:absolute; top:-10px; left:450px;">
+                            <thead>
+                               <tr>
+                                    <th colspan="3">常用DNS服务器</th>
+                               </tr>
+                            </thead>
+                            <tbody id="server_list">
+                               <tr>
+                                   <td><span class="connect na-ops glyphicon glyphicon-globe" id="114_DNS">114DNS</span></td>
+                                   <td>114.114.114.114</td>
+                                   <td>114.114.115.115</td>
+                               </tr>
+                               <tr>
+                                   <td><span class="connect na-ops glyphicon glyphicon-globe" id="ali_DNS">阿里DNS</span></td>
+                                   <td>223.5.5.5</td>
+                                   <td>223.6.6.6</td>
+                               </tr>
+                               <tr>
+                                   <td><span class="connect na-ops glyphicon glyphicon-globe" id="google_DNS">googleDNS</span></td>
+                                   <td>8.8.8.8</td>
+                                   <td>8.8.4.4</td>
+                               </tr>
+                               <tr>
+                                   <td><span class="connect na-ops glyphicon glyphicon-globe" id="open_DNS">OpenDNS</span></td>
+                                   <td>208.67.222.222</td>
+                                   <td>208.67.220.220</td>
+                               </tr>
+                          </tbody>
+                      </table>  
+
+                </div>
+                <div id="adv_wrapper" style="display: none;">
+                    <div id="adv_collapsiable" data-toggle="collapse" data-target="#adv_box">
+                        <h3 class="adsz" style="cursor: pointer;">高级设置<span class="glyphicon glyphicon-plus-sign" style="margin-left:10px; color: #30a5ff;"></span>
+                        </h3>
+                    </div>
+                    <div id="adv_box" class="collapse">
+                        <div id="speedmode_box" style="display: none;">
+                        <div class="item">
+                            <label class="k">速率及模式</label>
+                            <span class="v">
+                                <select id="speedmode" class="beautify" name="speedmode" style="display: none;">
+                                    <option value="auto">自动协商</option>
+                                    <option value="100full">100M全双工</option>
+                                    <option value="100half">100M半双工</option>
+                                    <option value="10full">10M全双工</option>
+                                    <option value="10half">10M半双工</option>
+                                </select><input type="text" readonly="readonly" class="input-select dummy">                                
+                            </span>
+                        </div>
+                        <div class="item">
+                            <label class="k">当前状态</label>
+                            <span class="v">
+                                <em class="ztips" id="curr_speedmode">读取中...</em>
+                            </span>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" class="button out_save" name="out_save" value="保存">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer_menu">
+        <ul class="menu">
+            <li><span class="glyphicon glyphicon-home"></span>
+                <a href="#">主页</a></li>
+            <li><span class="glyphicon glyphicon-send"></span>
+                <a href="#">加速设置</a></li>
+            <li class="mselecetd"><span class="glyphicon glyphicon-globe"></span>
+                <a href="#">外网设置</a></li>
+            <li><span class="glyphicon glyphicon-signal"></span>
+                <a href="#">无线设置</a></li>
+            <li><span class="glyphicon glyphicon-cog"></span>
+                <a href="#">高级设置</a></li>
+        </ul>
+    </div>
+
+    <div class="footer nfull">
+        <span>移动端</span><span>|</span><span>电脑端</span>
+        <p class="cpright">Copyright 2014-2016 极玩路由器</p>
+    </div>
+</body>
+
+</html>
