@@ -1,18 +1,20 @@
 *{ margin: 0; padding: 0; font-family: "微软雅黑"; }
-html{ height: 100%; }
-body{ background-color: #f1f4f7; padding-bottom: 60px; height: 78%; position: relative; }
+html,body{ height: 100%; }
+body{ background-color: #f1f4f7; padding-bottom: 60px; }
 a{ color: #30a5ff; text-decoration: none; }
 ul li{ list-style: none; }
 
+
+.wrap{  min-height: 100%; height: auto; position: relative; }
 /**************头部banner**************/
-.header{ width: 100%; height: 50px; background-color: #0083cc; position: relative; }
-.header .logo{ font: normal 24px/50px "微软雅黑"; color: #fff; margin-left: 10%; line-height: 50px; }
+.header{ width: 100%; height: 55px; background-color: #0083cc; position: relative; }
+.header .logo{ font: normal 26px/56px "微软雅黑"; color: #fff; margin-left: 10%; }
 /*.header a{  width: 30px; height: 30px; position: absolute; top: 15px; background-size: 30px 30px; }*/
 /*.header .toEn{ right: 10px; background: url(../images/toEn.png) no-repeat; }*/
 .header .logout{ position: absolute; top: 15px; right: 20px; font-size: 22px; color: #fff; }
 
 /*************内容框************/
-.content{ padding: 10px; min-height: 100%; }
+.content{ padding: 10px; }
 .content > div{ background-color: #fff; padding: 10px; margin-bottom: 10px; }/*白色的板块*/
 .content span{ display: inline-block; }/*首页中的小标题*/
 
@@ -29,22 +31,22 @@ ul li{ list-style: none; }
 .content a.goset{ float: right; margin-top: 10px; }
 .content .sysinfo{ min-height: 150px; }
 
-.outnet>form>div{ margin: 10px 0; }
 /*.outnet span{ margin: 0 5px; text-align: right; width: 4em; vertical-align: top; }*/
 .outnet a{ font-size: 14px; }
 
 
 /***********外网设置**********/
-.form{ text-align: center; }
-.item{ width: 100%; text-align: center; }
-.item .out_item{ font-size: 18px; color: #000; display: inline-block; text-align: right; width: 4em; margin: 0 5px; line-height: 40px; }
-.item .select{ display: inline-block; text-align: left; padding-left: 10px; width: 64%; height: 40px; overflow: hidden; vertical-align: middle; background:url(../images/bgselect.png) no-repeat; background-size: 100% 90%; }
+.form{ text-align: right; }
+.outnet{ overflow: hidden; zoom: 1; }
+.item{ width: 100%; text-align: left; margin-bottom: 10px; }
+.item .out_item{ color: #000; display: inline-block; text-align: right; width: 5em; margin: 0 5px 0 0; line-height: 40px; }
+.item .select{ display: inline-block; text-align: left; border: none; outline: none; padding-left: 10px; width: 63%; height: 40px; overflow: hidden; vertical-align: middle; background:url(../images/bgselect.png) no-repeat; background-size: 100% 90%; }
 .select ul li{ height: 40px; }
-.select ul li a, .select p a{ line-height: 36px; font-size: 16px; color: #7e7e7e; }
-.item .rescan{ margin: 10px 0; width: 80px; }
-.out_save{ width: 80px; }
-.ztips{ display: inline-block; width: 64%; text-align: left; line-height: 40px; font-size: 18px; color: #41aafb; }
-.text_ipt{ width: 98%; height:65%; border:1px solid #dedede; border-radius:5px; line-height:35px}
+.select ul li a, .select p a{ line-height: 36px; color: #7e7e7e; }
+.item .rescan{ margin: 10px 0 0; width: 80px; }
+.out_save{ width: 80px; margin-top: -10px; }
+.ztips{ display: inline-block; width: 64%; text-align: left; line-height: 40px; color: #41aafb; }
+/*.text_ipt{ width: 98%; height:65%; border:1px solid #dedede; border-radius:5px; line-height:35px}*/
 .sele_frame select{ width: 100%; }
 .selection{ font-size: 14px; width: 50%; box-shadow: 0px 0px 5px #ccc; border: 1px solid #ccc; border-radius: 5px; outline: none; color: #666; }
 
@@ -56,7 +58,7 @@ span.bullhorn{ color: #0083cc; font-size: 22px; vertical-align: top; margin: 8px
 .swbar > span{ font-size: 18px; }
 .accel_refre{ float: right; font-size: 18px; color: #39a2f3; margin-right: 30px; margin-top: 3px; vertical-align: top; }
 .server_box{ overflow: hidden; zoom: 1; }/*清浮动*/
-.server_head{}
+.server_head{ margin-top: 10px; }
 .server_sort{ border-collapse: collapse; display: inline-table;  }
 .server_sort tr td{ font-size: 14px; background-color: #ccc;  text-align: center; height: 20px; width: 60px; }
 
@@ -75,9 +77,35 @@ span.bullhorn{ color: #0083cc; font-size: 22px; vertical-align: top; margin: 8px
 .connect{ width: 70px; }
 
 .other_set{ width: 100px; height: 30px; float: right; margin: 10px 10px 0 0; }
-.button{ background: url(../images/button.png) no-repeat; margin-bottom: 10px; color: #fff; background-size: 100% 100%; border: none; outline: none; font-size: 16px; line-height: 26px; }
+.button{ background: url(../images/button.png) no-repeat; color: #fff; background-size: 100% 100%; border: none; outline: none; font-size: 16px; line-height: 26px; }
 .ok_icon{ color: #2ecc71; }
 .sw_on{ height: 28px; float: right; margin: 0 5px; }
+
+
+/**************无线设置*****************/
+/*.wifi_set{ overflow: hidden; zoom: 1; }*/
+.wifiname{ margin-top: 10px; }
+.item-pwd-1{ position: relative; }
+.text_ipt{ font-size: 16px; background: url(../images/bgtxt.png)no-repeat; background-size: 100% 90%; border: none; outline: none; width:63%; height:40px; vertical-align: middle; color:#7e7e7e; padding-left: 10px; }
+.eyeopen{ font-size: 16px; background: url(../images/eyeopen.png) no-repeat; background-size: 100% 90%; border: none; outline: none; width:63%; height:40px; vertical-align: middle; color:#7e7e7e; padding-left: 10px;  }
+.btn_center{ width: 100%; text-align: right; }
+.wifi_save{ width: 80px; }
+
+
+
+/**************高级设置****************/
+.client_manage span{ text-align: left; }
+.set_item{ line-height: 40px; padding-left: 1em; }
+.dvc_list li{ text-align: center; }
+.dvc_list li>*{vertical-align: middle; display: inline-block; }
+.dvc_list li>span{ margin-right: 3%; }
+.dvc_list li:nth-child(odd){ background-color: #f0f0f0; }
+.dvc_list li:nth-child(even){ background-color: #fafafa; }
+.wireless{ background: url(../images/wifi.png); width: 20px; height: 20px; background-size: 100%; }
+.wired{ background: url(../images/network_cable.png); width: 20px; height: 20px; background-size: 100%; }
+.dvc_name{ height: 22px; width: 7em; overflow: hidden; }
+.rate{ margin-right: 3%; font-size: 12px; }
+.show_detail{ background: url(../images/show_detail.png); width: 20px; height: 20px; background-size: 100%; vertical-align: middle; }
 /****************底部菜单栏****************/
 .footer_menu{ font-size: 0; }
 ul.menu{ width: 100%; position: fixed; bottom: 0; background-color: #fff; }
@@ -87,6 +115,7 @@ ul.menu li a{  width: 4em; color: #0083cc; font-size: 12px; }
 ul.menu li span.glyphicon{ font-size: 30px; color: #0083cc; margin: 0 auto; width: 100%; }
 ul.menu .mselecetd{ background-color: #f1f4f7; border-top: 2px solid #f1f4f7; border-bottom: 2px solid #0083cc; }
 
-.footer{ text-align: center; position: absolute; bottom: 0;  width: 100%; }
+.footer{ text-align: center; width: 100%; position: absolute; bottom: -110px; margin-bottom: 60px; }
+/*.nfull{ position: absolute; bottom: 60px;  }*/
 .footer > span{ margin: 0 10px; font-size: 12px; }
 .footer > p{ color: #333; line-height: 36px; font-size: 12px; }

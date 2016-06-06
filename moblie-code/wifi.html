@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0088)http://192.168.199.1/cgi-bin/luci/;stok=9f5b80c0e1febf51169c8660b8689126/web/sys/sysinfo -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/mobile-style.css">
+    <link rel="stylesheet" type="text/css" href="CSS/fontstyle.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="header">
+    	<span class="logo">GEEWAN 极玩</span>
+    	<!-- <a href="#" class="toEn"></a> -->
+    	<span class="glyphicon glyphicon-log-out logout"></span>
+    </div>
+
+    <div class="content">
+    	<div class="swbar">
+            <span>无线开关</span>
+            <img src="images/accel_on.png" id="accel_sw" class="sw_on" />
+        </div>
+
+        <div class="wifi_set">
+            <form class="form" autocomplete="off" name="cfg_form" id="cfg_form">
+
+                <div class="item wifiname">
+                    <label class="out_item">WIFI名称</label>
+                    <input type="text" name="ssid" class="text_ipt" autocomplete="off" value="fregie-wifi" />
+                </div>
+
+                <div class="item item-set">
+                    <label class="out_item">无线信道</label>
+                    <div class="select">
+                        <p><a href="" value="0">自动</a></p>
+                        <ul style="display:none">
+                            <li><a href="" value="1">1</a></li>
+                            <li><a href="" value="2">2</a></li>
+                            <li><a href="" value="3">3</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                <div class="item">
+                    <label class="out_item">加密方式</label>
+                    <div class="select">
+                        <p><a href="" value="none">不加密</a></p>
+                        <ul style="display:none">
+                            <li><a href="" value="mixed-psk">强加密</a></li>
+
+                        </ul>
+                    </div>
+                </div>  
+                <div class="item item-pwd-1" style="">
+                        <label class="out_item">密码</label>
+                        <input type="password" name="ssid" class="eyeopen" autocomplete="off" value="fregie-wifi" />
+                </div> 
+                <div class="item btn_center">
+                    <button class="button wifi_save">保存</button>  
+                </div>     
+            </form>
+        </div>
+    </div>
+
+    <div class="footer_menu">
+    	<ul class="menu">
+    		<li><span class="glyphicon glyphicon-home"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/home.html">主页</a></li>
+            <li><span class="glyphicon glyphicon-send"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/accel.html">加速设置</a></li>
+    		<li><span class="glyphicon glyphicon-globe"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/outnet.html">外网设置</a></li>
+    		<li class="mselecetd"><span class="glyphicon glyphicon-signal"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/wifi.html">无线设置</a></li>
+    		<li><span class="glyphicon glyphicon-cog"></span>
+                <a href="https://tritty.github.io/GEEWAN/moblie-code/settings.html">高级设置</a></li>
+    	</ul>
+    </div>
+
+    <div class="footer">
+        <span>移动端</span><span>|</span><span>电脑端</span>
+        <p class="cpright">Copyright 2014-2016 极玩路由器</p>
+    </div>
+</div>
+</body>
+</html>
