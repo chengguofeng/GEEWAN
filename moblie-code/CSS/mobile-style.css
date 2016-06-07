@@ -1,11 +1,48 @@
-*{ margin: 0; padding: 0; font-family: "微软雅黑"; }
+*{ margin: 0; padding: 0; font-family: "微软雅黑"; background-size: 100%; }
 html,body{ height: 100%; }
 body{ background-color: #f1f4f7; padding-bottom: 60px; }
 a{ color: #30a5ff; text-decoration: none; }
 ul li{ list-style: none; }
 
-
+/************最外层包裹层********/
 .wrap{  min-height: 100%; height: auto; position: relative; }
+
+
+/************公用部分******************************/
+
+.span01{ display: inline-block; width: 6em; text-align: left; }
+/*.item{ width: 100%; }*/
+.out_item{ color: #000; display: inline-block; text-align: right; width: 5em; margin: 0 5px 0 0; line-height: 40px; }
+.select{ display: inline-block; text-align: left; border: none; outline: none; padding-left: 10px; width: 63%;  background-size: 100% 90%; height: 40px; overflow: hidden; vertical-align: middle; background:url(../images/bgselect.png) no-repeat; }
+.ztips{ display: inline-block; width: 64%; text-align: left; line-height: 40px; color: #41aafb; }
+.text_ipt{ font-size: 16px; background: url(../images/bgtxt.png)no-repeat;  border: none; outline: none; width:63%; background-size: 100%; height:40px; vertical-align: middle; color:#7e7e7e; padding-left: 10px; }
+.button, .lbtn{ color: #fff;  border: none; outline: none; font-size: 16px; line-height: 26px; }
+.button{ background: url(../images/button.png) no-repeat; width: 80px; }
+.lbtn{ background: url(../images/lbtn.png) no-repeat; width: 140px; }
+.ok_icon{ color: #2ecc71; }
+.sw_on{ height: 28px; float: right; margin: 0 5px; }	
+
+input{ background-size: 100% 90%; }
+
+.left{ text-align: left; }
+.center{ text-align: center; }
+.mt10{ margin-top: 10px; }
+/*.s{ width: 60px; }
+.m{ width: 80px; }
+.l{ width: 100px; }
+.xl{ width: 120px; }
+.xxl{ width: 140px; }
+.centerm{ margin: 0 auto; }*/
+/*************内容框************/
+	.content{ padding: 10px; }
+	.content > div{ background-color: #fff; padding: 10px; margin-bottom: 10px; }/*白色的板块*/
+
+
+
+/******************************************/
+
+
+
 /**************头部banner**************/
 .header{ width: 100%; height: 55px; background-color: #0083cc; position: relative; }
 .header .logo{ font: normal 26px/56px "微软雅黑"; color: #fff; margin-left: 10%; }
@@ -13,39 +50,35 @@ ul li{ list-style: none; }
 /*.header .toEn{ right: 10px; background: url(../images/toEn.png) no-repeat; }*/
 .header .logout{ position: absolute; top: 15px; right: 20px; font-size: 22px; color: #fff; }
 
-/*************内容框************/
-.content{ padding: 10px; }
-.content > div{ background-color: #fff; padding: 10px; margin-bottom: 10px; }/*白色的板块*/
-.content span{ display: inline-block; }/*首页中的小标题*/
+
+
 
 /***************通知栏*************/
 .content .notice{ height: 40px; }
-.wan_ok{display:inline-block; background:url(../images/correct.gif) no-repeat; width:36px; height:39px; margin: 0 10px; float: left;}
+.wan_ok{display:inline-block; background:url(../images/correct.gif) no-repeat; background-size: 100%; width:30px; height:32px; margin: 5px 10px; float: left;}
 .span1{ line-height: 40px; }
 
+
+/***********首页*******************/
 .content span.item_bg{ background: url(../images/item_bg.png) no-repeat; display: inline-block; width: 100px; height: 39px; color: #fff; font: 18px/40px "微软雅黑"; padding-left: 10px; margin-left: -10px; }
 .content .item_wrap{ margin: 3% 0 0 3%; overflow: hidden; zoom: 1; }
 .item_wrap p{ line-height: 26px; }
 .item_wrap i.accel_ok{ display: inline-block; width: 14px; height: 14px; background: url(../images/con_ok.png) no-repeat; }
-.content span.span01{ width: 6em; }
 .content a.goset{ float: right; margin-top: 10px; }
 .content .sysinfo{ min-height: 150px; }
 
-/*.outnet span{ margin: 0 5px; text-align: right; width: 4em; vertical-align: top; }*/
 .outnet a{ font-size: 14px; }
 
 
 /***********外网设置**********/
-.form{ text-align: right; }
+/*.form{ text-align: right; }*/
 .outnet{ overflow: hidden; zoom: 1; }
-.item{ width: 100%; text-align: left; margin-bottom: 10px; }
-.item .out_item{ color: #000; display: inline-block; text-align: right; width: 5em; margin: 0 5px 0 0; line-height: 40px; }
-.item .select{ display: inline-block; text-align: left; border: none; outline: none; padding-left: 10px; width: 63%; height: 40px; overflow: hidden; vertical-align: middle; background:url(../images/bgselect.png) no-repeat; background-size: 100% 90%; }
-.select ul li{ height: 40px; }
-.select ul li a, .select p a{ line-height: 36px; color: #7e7e7e; }
+.outnet .item{ text-align: center; }
+
+.select li{ height: 40px; line-height: 40px; }
+.select li a, .select p a{ line-height: 36px; color: #7e7e7e; }
 .item .rescan{ margin: 10px 0 0; width: 80px; }
 .out_save{ width: 80px; margin-top: -10px; }
-.ztips{ display: inline-block; width: 64%; text-align: left; line-height: 40px; color: #41aafb; }
 /*.text_ipt{ width: 98%; height:65%; border:1px solid #dedede; border-radius:5px; line-height:35px}*/
 .sele_frame select{ width: 100%; }
 .selection{ font-size: 14px; width: 50%; box-shadow: 0px 0px 5px #ccc; border: 1px solid #ccc; border-radius: 5px; outline: none; color: #666; }
@@ -77,35 +110,60 @@ span.bullhorn{ color: #0083cc; font-size: 22px; vertical-align: top; margin: 8px
 .connect{ width: 70px; }
 
 .other_set{ width: 100px; height: 30px; float: right; margin: 10px 10px 0 0; }
-.button{ background: url(../images/button.png) no-repeat; color: #fff; background-size: 100% 100%; border: none; outline: none; font-size: 16px; line-height: 26px; }
-.ok_icon{ color: #2ecc71; }
-.sw_on{ height: 28px; float: right; margin: 0 5px; }
+
 
 
 /**************无线设置*****************/
-/*.wifi_set{ overflow: hidden; zoom: 1; }*/
+.wifi_set .item{ text-align: center; }
 .wifiname{ margin-top: 10px; }
 .item-pwd-1{ position: relative; }
-.text_ipt{ font-size: 16px; background: url(../images/bgtxt.png)no-repeat; background-size: 100% 90%; border: none; outline: none; width:63%; height:40px; vertical-align: middle; color:#7e7e7e; padding-left: 10px; }
-.eyeopen{ font-size: 16px; background: url(../images/eyeopen.png) no-repeat; background-size: 100% 90%; border: none; outline: none; width:63%; height:40px; vertical-align: middle; color:#7e7e7e; padding-left: 10px;  }
-.btn_center{ width: 100%; text-align: right; }
+.eyeopen{ font-size: 16px; background: url(../images/eyeopen.png) no-repeat;  border: none; outline: none; width:63%; height:40px; vertical-align: middle; color:#7e7e7e; padding-left: 10px;  }
+.btn_center{ width: 100%; text-align: center; margin-top: 10px; }
 .wifi_save{ width: 80px; }
 
 
 
 /**************高级设置****************/
+.content h4{ text-align: left; }
+.lan_set{ text-align: center; }
 .client_manage span{ text-align: left; }
 .set_item{ line-height: 40px; padding-left: 1em; }
-.dvc_list li{ text-align: center; }
-.dvc_list li>*{vertical-align: middle; display: inline-block; }
-.dvc_list li>span{ margin-right: 3%; }
+.dvc_list li{ text-align: center; padding: 3px 0; overflow: hidden; zoom: 1; }
+.dvc_list li>*{vertical-align: middle; }
+.dvc_list li>span{ margin-right: 3%; display: inline-block; background-size: 100%; }
 .dvc_list li:nth-child(odd){ background-color: #f0f0f0; }
 .dvc_list li:nth-child(even){ background-color: #fafafa; }
-.wireless{ background: url(../images/wifi.png); width: 20px; height: 20px; background-size: 100%; }
-.wired{ background: url(../images/network_cable.png); width: 20px; height: 20px; background-size: 100%; }
+.wireless{ background: url(../images/wifi.png); width: 20px; height: 20px;  }
+.wired{ background: url(../images/network_cable.png); width: 20px; height: 20px; }
 .dvc_name{ height: 22px; width: 7em; overflow: hidden; }
-.rate{ margin-right: 3%; font-size: 12px; }
-.show_detail{ background: url(../images/show_detail.png); width: 20px; height: 20px; background-size: 100%; vertical-align: middle; }
+.rate{ display: inline-block; margin-right: 3%; font-size: 12px; }
+.show_detail{ background: url(../images/show_detail.png); width: 20px; height: 20px;  vertical-align: middle; }
+.dvc_detail{ padding: 10px 0; background-color: #e0e0e0; text-align: center; font-size: 15px; width: 100%; float: right; }
+.dvc_detail p{ line-height: 22px; display: inline-block; text-align: left; width: 15em; }
+.rate_lmt{ font-size: 14px; width: 3em; outline: none; border: 1px solid #ccc; border-radius: 5px; padding-left: 5px; height: 18px; }
+.name_change{ width: 7rem; height: 18px; padding-left: 5px; font-size: 14px; outline: none; border: 1px solid #ccc; border-radius: 5px; }
+.dvc_detail span.glyphicon{ font-size: 16px; display: inline-block; margin: 0 5px; }
+.dvc_save{ width: 80px; margin-top: 10px; }
+
+
+.autoreboot>p{ text-align: center; }
+.synchro{ width: 15%; font-size: 14px; }
+.repeated_per{ text-align: center; }
+.repeated_per>p{ padding-left: 2%; text-align: left; }
+.week{ width: 100%; text-align: center; margin-top: 10px;}
+.repeated_per>span{ display: inline-block; vertical-align: bottom; height: 40px; line-height: 40px; }
+.week li{ display: inline-block; width: 12%; font: bold 14px/20px "幼圆"; border: 1px solid #e0e0e0; border-radius: 5px; background-color: #e0e0e0; }
+
+
+.time{ margin: 10px 0 0 0; color: #666; line-height: 30px; }
+.auto_save{ width: 80px; }
+
+.update{ text-align: center; }
+.update>div{ margin: 10px 0; }
+.update p{ text-align: left; line-height: 26px; width: 17em; display: inline-block; }
+.update p span:not(.span01){ width: 11em; }
+.update_tip{ font-size: 14px; margin: 15px 0; }
+.reset{ font-size:16px; width:16px; }
 /****************底部菜单栏****************/
 .footer_menu{ font-size: 0; }
 ul.menu{ width: 100%; position: fixed; bottom: 0; background-color: #fff; }

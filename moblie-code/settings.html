@@ -17,12 +17,13 @@
     </div>
 
     <div class="content">
-    	<div class="lan_set">
+    	<div class="lan_set center">
             <h4 class="set_item">内网设置</h4>
             <div class="item">
                 <span class="out_item">IP地址</span>
                 <input type="text" name="ip" class="text_ipt">
             </div>
+            <button class="lbtn mt10">保存</button>
         </div>
 
         <div class="client_manage">
@@ -33,16 +34,25 @@
                     <span class="wireless"></span> 
                     <span class="dvc_name">fregie's phone</span> 
                     <div class="rate"> 
-                        <p><span>上行：</span><span>5KB/S</span></p><br>
+                        <p><span>上行：</span><span>5KB/S</span></p>
                         <p><span>下行：</span><span>1KB/S</span></p>
                     </div> 
                     <span class="show_detail"></span>
+                    <div class="dvc_detail" style="display:none;">
+                        <p><span class="span01">IP地址</span><span>192.168.199.187</span></p>
+                        <p><span class="span01"> MAC地址</span><span>60:57:18:8E:D1:A9</span></p>
+                        <p><span class="span01">上行限速</span><input type="text" name="" class="rate_lmt"><span>KB/S</span></p>
+                        <p><span class="span01">下行限速</span><input type="text" name="" class="rate_lmt"><span>KB/S</span></p>
+                        <p><span class="span01">设备名称</span><input type="text" name="" class="name_change" value="fregie's phone"></p>
+                        <p><span class="glyphicon glyphicon-unchecked"></span><span style="color:#41aafb;">禁止连接</span></p>
+                        <button class="lbtn">保存</button>
+                    </div>
                 </li>
                 <li>
                     <span class="wired"></span> 
                     <span class="dvc_name">fregie's PC</span> 
                     <div class="rate"> 
-                        <p><span>上行：</span><span>5KB/S</span></p><br>
+                        <p><span>上行：</span><span>5KB/S</span></p>
                         <p><span>下行：</span><span>1KB/S</span></p>
                     </div> 
                     <span class="show_detail"></span>
@@ -50,13 +60,74 @@
             </ul>
         </div>
 
-        <div class="autoreboot"></div>
+        <div class="autoreboot">
+            <div class="swbar">
+                <h4 class="set_item" style="display:inline-block;">定时重启</h4>
+                <img src="images/accel_on.png" class="sw_on" style="margin-top:7px;" />
+            </div>
+            <p>
+                <span>当前路由器时间：</span><span>16-6-7 21:42</span>
+                <button class="button synchro">同步</button>
+            </p>
+            <div class="repeated_per">
+                <p>重复周期</p>
+                <ul class="week">
+                    <li>周一</li>
+                    <li>周二</li>
+                    <li>周三</li>
+                    <li>周四</li>
+                    <li>周五</li>
+                    <li>周六</li>
+                    <li>周日</li>
+                </ul>
+                <span>小时</span>
+                <ul class="select time">
+                    <li>00</li>
+                    <li>01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                    <li>05</li>
+                    <li>06</li>
+                    <li>07</li>
+                </ul><br>
+                <span>分钟</span>
+                <ul class="select time">
+                    <li>00</li>
+                    <li>01</li>
+                    <li>02</li>
+                    <li>03</li>
+                    <li>04</li>
+                    <li>05</li>
+                    <li>06</li>
+                    <li>07</li>
+                </ul>
+                <button class="lbtn mt10">保存</button>
+            </div>
 
-        <div class="update"></div>
+        </div>
 
-        <div class="pwd_manage"></div>
+        <div class="update">
+            <h4 class="set_item">固件升级</h4>
+            <p><span class="span01">硬件型号：</span><span>GF1</span></p>
+            <p><span class="span01">软件版本：</span><span>bigwan 0.0.23-FREGIE</span></p>
+            <p class="update_tip">请上传一个固件进行升级，升级过程请勿断电！</p>
+            <div><span class="glyphicon glyphicon-unchecked reset"></span> 同时恢复出厂设置</div>
+            <div><span class="span01">上传固件：</span><button class="file_slct">选择文件</button><span style="font-size:14px;">未选择任何文件</span></div>
+            <button class="lbtn">升级</button>
+        </div>
 
-        <div class="fac_restore"></div>
+        <div class="pwd_manage center">
+            <h4 class="set_item">管理密码</h4>
+            <p><span class="out_item">原始密码</span><input type="text" name="org_pwd" class="text_ipt" /></p>
+            <p><span class="out_item">新密码</span><input type="text" name="org_pwd" class="text_ipt" /></p>
+            <button class="lbtn mt10">保存</button>
+        </div>
+
+        <div class="fac_restore center">
+            <h4 class="set_item">恢复出厂</h4>
+            <button class="lbtn">恢复出厂设置</button>
+        </div>
     </div>
 
     <div class="footer_menu">

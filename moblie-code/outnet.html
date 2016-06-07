@@ -19,17 +19,15 @@
 
     <div class="content">
     	<div class="outnet" style="padding-left:0;">
-    		<form class="form" autocomplete="off" name="wan" id="wan">
+    		<form class="form center" autocomplete="off" name="wan" id="wan">
                 <div class="item" style="margin-top:10px;">
                     <label class="out_item">上网方式</label>
-                    <div class="select">
-                        <p><a href="" value="wisp">无线中继</a></p>
-                        <ul style="display:none">
-                            <li><a href="" value="dhcp">自动获取</a></li>
-                            <li><a href="" value="pppoe">宽带拨号</a></li>
-                            <li><a href="" value="static">静态IP</a></li>
-                        </ul>
-                    </div>                            
+                    <ul class="select">
+                        <li><a href="" value="wisp">无线中继</a></li>
+                        <li><a href="" value="dhcp">自动获取</a></li>
+                        <li><a href="" value="pppoe">宽带拨号</a></li>
+                        <li><a href="" value="static">静态IP</a></li>
+                    </ul>                      
                 </div>
                 <div id="pppoe" name="pppoe" style="display:none">
                     <div class="item">
@@ -75,14 +73,12 @@
                     <div class="item" style="margin-bottom:0;">
                         <label class="out_item">名称</label>
                         <!-- <span id="ssid_wrapper" style="display: none;"></span> -->
-                        <div class="select">
-                            <ul>
-                                <li><a href="" value="wisp">fregie-wifi(信道9)</a></li>
-                                <li><a href="" value="dhcp">自动获取</a></li>
-                                <li><a href="" value="pppoe">宽带拨号</a></li>
-                                <li><a href="" value="static">静态IP</a></li>
-                            </ul>
-                        </div>
+                        <ul  class="select">
+                            <li><a href="" value="wisp">fregie-wifi(信道9)</a></li>
+                            <li><a href="" value="dhcp">自动获取</a></li>
+                            <li><a href="" value="pppoe">宽带拨号</a></li>
+                            <li><a href="" value="static">静态IP</a></li>
+                        </ul>
                         <!-- <a href="">xxxxxxxxxxxxxx</a> -->
                         <input type="button" name="rescan" id="scan" class="button rescan" value="重新扫描" />
                         
@@ -194,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                <input type="button" class="button out_save" name="out_save" value="保存">
+                <input type="button" class="button m" name="out_save" value="保存">
             </form>
         </div>
     </div>
